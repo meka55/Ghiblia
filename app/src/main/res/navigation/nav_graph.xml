@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/ghibliaFragment">
+    <fragment
+        android:id="@+id/ghibliaFragment"
+        android:name="com.example.ghiblia.ui.fragments.GhibliaFragment"
+        android:label="fragment_ghiblia"
+        tools:layout="@layout/fragment_ghiblia" >
+        <action
+            android:id="@+id/action_ghibliaFragment_to_detailGhibliaFragment"
+            app:destination="@id/detailGhibliaFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/detailGhibliaFragment"
+        android:name="com.example.ghiblia.ui.fragments.detail.DetailGhibliaFragment"
+        android:label="fragment_detail_ghiblia"
+        tools:layout="@layout/fragment_detail_ghiblia" >
+
+        <argument
+            android:name="id"
+            app:argType="string"
+            android:defaultValue="eis" />
+    </fragment>
+
+</navigation>
